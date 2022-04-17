@@ -1,0 +1,1 @@
+Having underestimated the size of many of the projects I have endevoured to create, I am going to make a small, basic card game using SFML to get a grasp on how I will implement graphical features and such. To start, I will make the card game 'War', where 2 players each take half of the deck, the compare the top cards.
