@@ -16,7 +16,6 @@ using namespace std;
 class Initializer {
 public:
 
-	Initializer() {}
 	Initializer() : window(sf::VideoMode(screenWidth, screenHeight), "War Card Game"), 
 					eventHandler(window, screenWidth, screenHeight) {
 						

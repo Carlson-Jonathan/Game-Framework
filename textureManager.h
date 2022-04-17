@@ -13,7 +13,6 @@ using namespace std;
 class TextureManager {
 public:
 
-	TextureManager() {}
 	TextureManager() {
 		populateTextures();
 	}

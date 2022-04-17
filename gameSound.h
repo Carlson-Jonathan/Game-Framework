@@ -11,7 +11,6 @@ using namespace std;
 class GameSound {
 public:
 
-	GameSound() {}
 	GameSound() {
 		SFMLmusic.setLoop(true);
 	}
