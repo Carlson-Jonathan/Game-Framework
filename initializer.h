@@ -26,7 +26,7 @@ public:
 		background.setOrigin(0, 0);	
 
 		// Play song
-		gameSound.loadAndPlayMusic("Sounds/Music/battle1.ogg");
+		gameSound.loadAndPlayMusic("Sounds/Music/ExampleSong.ogg");
 	}
 
 	unsigned int screenWidth  = 1333;

@@ -11,15 +11,13 @@ using namespace std;
 int main() {
 
 	Initializer globalData;
-	int x = 0;
 	
 	/**************************************  Main Game Loop ****************************************/
     while(globalData.window.isOpen()) {
-
-		globalData.eventHandler.listen();
 		globalData.window.draw(globalData.background);
+		globalData.eventHandler.listen();
 
-		// cout << "Frames: " << x++ << endl;
+
 
 		globalData.window.display();
    	}

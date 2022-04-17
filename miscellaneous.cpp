@@ -22,7 +22,7 @@ vector<string> Miscellaneous::getAllFileNamesFromDirectory(const char *path) {
     DIR *directory = opendir(path);
 
     if (directory != NULL) {
-        while ((entry = readdir(directory)) != NULL) {
+        while((entry = readdir(directory)) != NULL) {
             string file = entry->d_name;
                 files.push_back(file);
         }
