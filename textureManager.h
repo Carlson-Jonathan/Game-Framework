@@ -13,10 +13,14 @@ using namespace std;
 #include <vector>
 
 /***************************************************************************************************
-* How to use:
+* How to use (1 step):
 * 1.) List all directory paths containing images you wish to load in the 'textureDirectories' variable.
-* 2.) getAllFileNamesFromDirectory() fills 'textureFilePaths' with file names and paths (strings).
-* 3.) populateTextures() fills public 'textures' with sf::texture files and keys to access them.
+*
+* getAllFileNamesFromDirectory() fills 'textureFilePaths' with file names and paths (strings).
+* populateTextures() fills public 'textures' with sf::texture files and keys to access them.
+*
+* When you need your texture, access this object using textures. Eg. 'texture = this.textures[imageName]'
+* The image name will be the file name without the extention. Make the file names unique!
 ***************************************************************************************************/
 class TextureManager {
 public:
@@ -32,8 +36,13 @@ private:
 	
 	// All paths to directories containing images you wish to load go here (relative to this file).
 	vector<string> textureDirectories = {
-		"./Images/"
+		"Images",
+		"Images/more"
 	};
+
+
+
+	//----------------------------------------------------------------------------------------------
 
 	sf::Texture texture;
 	vector< pair<string, string> > textureFilePaths;
@@ -71,6 +80,9 @@ private:
 	//----------------------------------------------------------------------------------------------
 
 	void loadTextureFilePaths() {
+
+		vector<string> supportedImageTypes = {".bmp", ".dds", ".jpg", ".png", ".tga", ".psd"};
+
 		for(auto dir : textureDirectories) {
 
 			char cDir[dir.length()];
@@ -80,7 +92,16 @@ private:
 
 			for(auto file : textureFiles) {
 
-				if(file == "." || file == "..")
+				bool invalidFile = true;
+
+				for(auto type : supportedImageTypes) {
+					size_t found = file.find(type);
+					if(found != string::npos) {
+						invalidFile = false;
+					}
+				}
+
+				if(invalidFile)
 					continue;
 
 				textureFilePaths.push_back({getTextureName(file), (dir + "/" + file)});
@@ -92,6 +113,7 @@ private:
 
 	void populateTextures() {
 		for(int i = 0; i < textureFilePaths.size(); i++) {
+
 			if(!texture.loadFromFile(textureFilePaths[i].second)) 
 				cout << "ERROR: Unable to load image '" << textureFilePaths[i].second << "'" << endl;
 			else 

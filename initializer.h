@@ -22,7 +22,7 @@ public:
 		window.setFramerateLimit(frameRate);
 
 		// Draw background
-		background.setTexture(textures.textures["background"]);  
+		background.setTexture(textures.textures["backgroundInSubFolder"]);  
 		background.setOrigin(0, 0);	
 
 		// Play song
