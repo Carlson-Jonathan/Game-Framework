@@ -6,10 +6,12 @@
 #include <iostream>
 using namespace std;
 
+#include <time.h>
 #include "initializer.h"
 
 int main() {
 
+	srand(time(NULL)); // Seeds random number generator. Must be before other intializers.
 	Initializer globalData;
 	
 	/**************************************  Main Game Loop ****************************************/
@@ -17,7 +19,7 @@ int main() {
 		globalData.window.draw(globalData.background);
 		globalData.eventHandler.listen();
 
-
+		// Start coding game here
 
 		globalData.window.display();
    	}

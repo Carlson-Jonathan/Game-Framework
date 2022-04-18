@@ -16,7 +16,7 @@ using namespace std;
 class Initializer {
 public:
 
-	Initializer() : window(sf::VideoMode(screenWidth, screenHeight), "War Card Game"), 
+	Initializer() : window(sf::VideoMode(screenWidth, screenHeight), "Framework By Jonathan Carlson"), 
 					eventHandler(window, screenWidth, screenHeight) {
 						
 		window.setFramerateLimit(frameRate);
@@ -27,6 +27,7 @@ public:
 
 		// Play song
 		gameSound.loadAndPlayMusic("Sounds/Music/ExampleSong.ogg");
+
 	}
 
 	unsigned int screenWidth  = 1333;

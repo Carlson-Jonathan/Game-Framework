@@ -3,13 +3,18 @@
 #ifndef EVENTHANDLER_H
 #define EVENTHANDLER_H
 
-#include "initializer.h"
 #include <iostream>
+using namespace std;
+
 #include <vector>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
-using namespace std;
+#include "initializer.h"
+
+/* 
+	It works, but it obviously needs a major refactor/cleanup
+*/
 
 class EventHandler {
 public:
@@ -60,7 +65,7 @@ public:
 					break;
 				case sf::Event::MouseButtonPressed:
 					mouseButton();
-					printJoyButtons();
+					// printJoyButtons();
 					break;
 				case sf::Event::MouseButtonReleased:
 					cout << "Released!" << endl;

@@ -2,16 +2,18 @@
 #define MISCELLANEOUS_H
 
 #include <iostream>
+using namespace std;
+
 #include <dirent.h>     // directory
 #include <vector>
 #include <sstream>
 #include <stdlib.h>     // srand, rand 
 #include <time.h>       
-using namespace std;
 
 // A library for miscellaneous, non-cohesive functions that do not need initialization.
 
 class Miscellaneous {
+
 public:
     static vector<string> filterByFileType(vector<string> files, const string fileType);
     static unsigned short generateRandomNumber(const short unsigned max);

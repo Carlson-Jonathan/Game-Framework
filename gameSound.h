@@ -4,9 +4,11 @@
 #define GAMESOUND_H
 
 #include <iostream>
+using namespace std;
+
 #include <SFML/Audio.hpp>
 #include <vector>
-using namespace std;
+#include "miscellaneous.h"
 
 class GameSound {
 public:
@@ -22,6 +24,8 @@ public:
 		}
 		SFMLmusic.play();
 	}
+
+	void loadAndPlayRandomSongFromDirectory() {}
 
 private: 
 

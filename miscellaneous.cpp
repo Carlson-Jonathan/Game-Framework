@@ -11,6 +11,7 @@ vector<string> Miscellaneous::filterByFileType(vector<string> files, const strin
 /*------------------------------------------------------------------------------------------------*/
 
 unsigned short Miscellaneous::generateRandomNumber(const short unsigned max) {
+    // srand (time(NULL));
     return rand() % max + 1;
 }
 
