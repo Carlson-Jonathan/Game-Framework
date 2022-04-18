@@ -16,10 +16,17 @@ int main() {
 	
 	/**************************************  Main Game Loop ****************************************/
     while(globalData.window.isOpen()) {
-		globalData.window.draw(globalData.background);
 		globalData.eventHandler.listen();
 
-		// Start coding game here
+		// ---------- Start coding game here ----------
+
+
+		// Draw background on a loop.
+		globalData.window.draw(globalData.background);
+
+
+
+		// -------------------------------------------
 
 		globalData.window.display();
    	}

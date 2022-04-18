@@ -14,12 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Value Computed by CMake
-AdventureGame_BINARY_DIR:STATIC=/media/jonathan/2TB Storage and Game Drive/Jon/Programming/CardGames/War/Build
-
-//Value Computed by CMake
-AdventureGame_SOURCE_DIR:STATIC=/media/jonathan/2TB Storage and Game Drive/Jon/Programming/CardGames/War
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -28,7 +22,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -151,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=AdventureGame
+CMAKE_PROJECT_NAME:STATIC=GameworkFramework
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -215,6 +209,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+GameworkFramework_BINARY_DIR:STATIC=/media/jonathan/2TB Storage and Game Drive/Jon/Programming/CardGames/War/Build
+
+//Value Computed by CMake
+GameworkFramework_SOURCE_DIR:STATIC=/media/jonathan/2TB Storage and Game Drive/Jon/Programming/CardGames/War
+
 //The directory containing a CMake configuration file for SFML.
 SFML_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SFML
 
@@ -230,8 +230,6 @@ SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-MODIFIED:INTERNAL=ON
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/media/jonathan/2TB Storage and Game Drive/Jon/Programming/CardGames/War/Build
 //Major version of cmake used to create the current loaded cache

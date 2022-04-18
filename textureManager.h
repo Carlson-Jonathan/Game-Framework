@@ -36,8 +36,8 @@ private:
 	
 	// All paths to directories containing images you wish to load go here (relative to this file).
 	vector<string> textureDirectories = {
-		"Images",
-		"Images/more"
+		"Images/Backgrounds",
+		"Images/Objects"
 	};
 
 

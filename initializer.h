@@ -16,18 +16,17 @@ using namespace std;
 class Initializer {
 public:
 
-	Initializer() : window(sf::VideoMode(screenWidth, screenHeight), "Framework By Jonathan Carlson"), 
+	Initializer() : window(sf::VideoMode(screenWidth, screenHeight), "Gamework Framework By Jonathan Carlson"), 
 					eventHandler(window, screenWidth, screenHeight) {
 						
 		window.setFramerateLimit(frameRate);
 
-		// Draw background
-		background.setTexture(textures.textures["backgroundInSubFolder"]);  
+		// Set background texture
+		background.setTexture(textures.textures["sample2"]);  
 		background.setOrigin(0, 0);	
 
 		// Play song
 		gameSound.loadAndPlayMusic("Sounds/Music/ExampleSong.ogg");
-
 	}
 
 	unsigned int screenWidth  = 1333;
