@@ -1,3 +1,5 @@
+// Copyright Jonathan Carlson 2022
+
 #ifndef MISCELLANEOUS_H
 #define MISCELLANEOUS_H
 

@@ -23,8 +23,6 @@ Note: Only step 4 will be used in most cases unless you need to remake the 'buil
 
 
 COMPILE INSTRUCTIONS (g++):
-    If CMake isnt working, you can try the 'compileAndRun.bash' script. Just run. If you get linker 
-    errors, you may need to add .cpp files that are not already listed because I will probably not 
-    be updating the script regularly.
+    If CMake isnt working, you can use the 'compileAndRun.bash' script. Run as is. 
     
 ![](FrameworkUML.png)

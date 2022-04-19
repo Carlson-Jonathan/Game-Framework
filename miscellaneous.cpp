@@ -1,23 +1,28 @@
+// Copyright Jonathan Carlson 2022
+
 #include "miscellaneous.h"
 
 vector<string> Miscellaneous::filterByFileType(vector<string> files, const string fileType) {
+
     for(short i = files.size() - 1; i > -1; i--) {
         if(!isFileType(files[i], fileType))
             files.erase(files.begin() + i);
     }
+
     return files;
 }
 
 /*------------------------------------------------------------------------------------------------*/
 
+// Requires call 'srand(time(NULL))' in the main.cpp before any other initializations.
 unsigned short Miscellaneous::generateRandomNumber(const short unsigned max) {
-    // srand (time(NULL));
     return rand() % max + 1;
 }
 
 /*------------------------------------------------------------------------------------------------*/
 
 vector<string> Miscellaneous::getAllFileNamesFromDirectory(const char *path) {
+
     struct dirent *entry;
     vector<string> files;
     DIR *directory = opendir(path);
@@ -58,10 +63,12 @@ float Miscellaneous::convertStringToFloat(string number) {
 
 string Miscellaneous::shrinkWhiteSpacing(string str) {
     size_t found = str.find("  ");
+
     while(found!=string::npos) {
         str.erase(str.begin() + found);
         found = str.find("  ");
     }
+
     return str;
 }
 

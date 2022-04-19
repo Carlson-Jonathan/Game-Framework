@@ -11,10 +11,10 @@ using namespace std;
 
 int main() {
 
-	srand(time(NULL)); // Seeds random number generator. Must be before other intializers.
+	srand(time(NULL)); 
 	Initializer globalData;
-	
-	/**************************************  Main Game Loop ****************************************/
+
+	// Main game loop	
     while(globalData.window.isOpen()) {
 		globalData.eventHandler.listen();
 
@@ -30,7 +30,6 @@ int main() {
 
 		globalData.window.display();
    	}
-   	/***********************************************************************************************/
 
 	return 0;
 }

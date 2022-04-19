@@ -13,4 +13,3 @@ add_executable(
 )
 
 target_link_libraries(Main.out sfml-graphics sfml-audio)
-
